@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCraft</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #76c4ea !important;
+        }
+        .navbar {
+            background-color: #76c4ea !important;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+        }
+        .tagline {
+            font-size: 15px; 
+            font-style: italic;
+        }
+        .navbar-divider {
+            border-top: 1px solid #000; 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+            height: 300px; /* Ensure consistent height for all cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .box p, .box a {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .box a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .contain {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        #bams, #bsc, #bhms, #bpt {
+            margin: 0;
+        }
+        #bams {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        #bsc {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        #bhms {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        #bpt {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        
+        .management-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #bba, #bhm, #execmba, #mba {
+            margin: 0;
+        }
+        #bba {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        #bhm {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        #execmba {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        #mba {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+       
+        .arts-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #ba, #bfa, #bsw, #ma {
+            margin: 0;
+        }
+        #ba {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        #bfa {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        #bsw {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        #ma {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        
+        @media (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="../exams_page/minilogo2.png" style="width:70px;height:50px">
+            <h3>CareerCraft<br><span class="tagline"><pre>    -design your career path</pre></span></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home_page/homep.html" >Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile.html" >Profile </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about_page.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact_page/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+        <hr>
+    </nav>
+    <hr class="navbar-divider">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="eng.png" alt="image" style="width:68px;height:68px;">
+                        <h3>Engineering</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BE/B.Tech</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">ME/M.Tech</h5></a>
+                            <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">Polytechnic</h5></a>
+                            <!-- <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">ECE</h5></a> -->
+                        </div>
+                    </div>
+                    <a href="Btech page.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="med.png" alt="image" style="width:68px;height:68px;">
+                        <h3>Medical</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BAMS</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.Sc</h5></a>
+                            <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BHMS</h5></a>
+                            <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BPT</h5></a>
+                        </div>
+                    </div>
+                    <a href="medical_page.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="sci.jpg" alt="image" style="width:68px;height:68px;">
+                        <h3>Science</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.Sc</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.Sc</h5></a>
+                            <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.F.Sc</h5></a>
+                            <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.F.Sc</h5></a>
+                        </div>
+                    </div>
+                    <a href="science_page.html">Explore  &rsaquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="man.png" alt="image" style="width:68px;height:68px;">
+                        <h3>Management</h3>
+                        <div class="management-grid-container">
+                            <a id="bba" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BBA</h5></a>
+                            <a id="bhm" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BHM</h5></a>
+                            <a id="execmba" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">Executive MBA</h5></a>
+                            <a id="mba" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">MBA/PGDM</h5></a>
+                        </div>
+                    </div>
+                    <a href="management.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="art.png" alt="image" style="width:68px;height:68px;">
+                        <h3>Arts</h3>
+                        <div class="arts-grid-container">
+                            <a id="ba" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BA</h5></a>
+                            <a id="bfa" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BFA</h5></a>
+                            <a id="bsw" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BSW</h5></a>
+                            <a id="ma" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">MA</h5></a>
+                        </div>
+                    </div>
+                    <a href="arts.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="law.png" alt="image" style="width:68px;height:68px;">
+                        <h3>Law</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">LLB</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">LLM</h5></a>
+                            <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BA/BBA LLB</h5></a>
+                            <!-- <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.A</h5></a> -->
+                        </div>
+                    </div>
+                    <a href="law.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="com.jpg" alt="image" style="width:68px;height:68px;">
+                        <h3>Commerce</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.Com</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.Com</h5></a>
+                            <!-- <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">IT</h5></a>
+                            <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">ECE</h5></a> -->
+                        </div>
+                    </div>
+                    <a href="commerce.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="edu.jpg" alt="image" style="width:68px;height:68px;">
+                        <h3>Education</h3>
+                        <div class="grid-container">
+                            <!-- <pre><p style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.Ed   |   B.P.Ed   |   M.Ed   |   M.P.Ed   </p></pre> -->
+                            <!-- <pre><p>BE/B.Tech     | ME/M.Tech    |    Polytechnic</p></pre> -->
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.Ed</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">B.P.Ed</h5></a>
+                            <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.Ed</h5></a>
+                            <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">M.p.Ed</h5></a> 
+                        </div>
+                    </div>
+                    <a href="edn.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="contain">
+                        <img src="app.jpg" alt="image" style="width:68px;height:68px;">
+                        <h3>Computer Applications</h3>
+                        <div class="grid-container">
+                            <a id="bams" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">BCA</h5></a>
+                            <a id="bsc" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">MCA</h5></a>
+                            <!-- <a id="bhms" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">IT</h5></a>
+                            <a id="bpt" href="#"><h5 style="color: rgb(5, 3, 10);font-family: 'Times New Roman', Times, serif;">ECE</h5></a> -->
+                        </div>
+                    </div>
+                    <a href="ca.html">Explore &rsaquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9OGpamhZS8QcK0lE+7oG6fH+jL5c1vjE1xtA" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

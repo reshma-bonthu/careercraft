@@ -1,0 +1,70 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-doubt {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post-doubt input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.post-doubt button {
+    padding: 10px 20px;
+    background-color: #57a5ba;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.doubt {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.doubt h3 {
+    margin: 0;
+}
+
+.doubt button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: #58bbea;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.replies {
+    margin-top: 10px;
+}
+
+.reply {
+    background: #eee;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

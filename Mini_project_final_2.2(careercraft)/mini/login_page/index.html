@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="../home_page/minilogo2.png">
+    <style>
+        .favicon-container {
+            width: 32px;
+            height: 32px;
+            background-color: #2281ad;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .favicon-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Welcome</h2>
+            <label>
+                <span>Username</span>
+                <input type="text" id="signInUsername" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" id="signInPassword" />
+            </label>
+            <button type="button" class="submit" id="signInButton">Sign In</button>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h3>Don't have an account? Please Sign up!</h3>
+                </div>
+                <div class="img__text m--in">
+                    <h3>If you already have an account, just sign in.</h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Sign In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Create your Account</h2>
+                <label>
+                    <span>Username</span>
+                    <input type="text" id="signUpUsername" />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" id="signUpEmail" />
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" id="signUpPassword" />
+                </label>
+                <label>
+                    <span>Confirm Password</span>
+                    <input type="password" id="signUpConfirmPassword" />
+                </label>
+                <button type="button" class="submit" id="signUpButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Sign Up / Sign In forms
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+
+        // Sign Up button click event
+        document.getElementById('signUpButton').addEventListener('click', function() {
+            const username = document.getElementById('signUpUsername').value;
+            const email = document.getElementById('signUpEmail').value;
+            const password = document.getElementById('signUpPassword').value;
+            const confirmPassword = document.getElementById('signUpConfirmPassword').value;
+
+            if (username && email && password && confirmPassword) {
+                if (password === confirmPassword) {
+                    alert('Sign up successful!');
+                    document.querySelector('.cont').classList.remove('s--signup');
+                } else {
+                    alert('Passwords do not match.');
+                }
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Sign In button click event
+        document.getElementById('signInButton').addEventListener('click', function() {
+            const username = document.getElementById('signInUsername').value;
+            const password = document.getElementById('signInPassword').value;
+
+            if (username && password) {
+                alert('Sign in successful!');
+                window.location.href = "../home_page/homep.html";
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>

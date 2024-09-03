@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCraft</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../home_page/minilogo2.png">
+    <style>
+        body {
+            background-color: #76c4ea;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            background-color: transparent !important; 
+        }
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+        }
+        .tagline {
+            font-size: 15px; 
+            font-style: italic;
+        }
+        .navbar-divider {
+            border-top: 1px solid #000; 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .white-background-button {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 40px);
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: box-shadow 0.3s;
+        }
+        .white-background-button:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .info-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .exam-container {
+            margin-bottom: 20px;
+        }
+        .exam-container hr {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="minilogo2.png" style="width:70px;height:50px">
+            <h3>CareerCraft<br><span class="tagline"><pre>    -design your career path</pre></span></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home_page/homep.html" >Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile.html" >Profile </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about_page.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact_page/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </nav>
+    <hr class="navbar-divider">
+    <h2 style="text-align:center">EXAMS</h2>
+    <div class="button-container">
+        <button class="white-background-button" onclick="showInfo('engineering')"><b>Engineering</b></button>
+        <button class="white-background-button" onclick="showInfo('medical')"><b>Medical</b></button>
+        <button class="white-background-button" onclick="showInfo('science')"><b>Science</b></button>
+        <button class="white-background-button" onclick="showInfo('arts')"><b>Arts</b></button>
+        <button class="white-background-button" onclick="showInfo('management')"><b>Management</b></button>
+        <button class="white-background-button" onclick="showInfo('law')"><b>Law</b></button>
+        <button class="white-background-button" onclick="showInfo('commerce')"><b>Commerce</b></button>
+        <button class="white-background-button" onclick="showInfo('education')"><b>Education</b></button>
+        <button class="white-background-button" onclick="showInfo('computerapplication')"><b>Computer Apllicaton</b></button>
+    </div>
+
+    <div class="info-section" id="info-section">
+        
+    </div>
+
+    <script>
+        function showInfo(course) {
+            const infoSection = document.getElementById('info-section');
+            let infoContent = '';
+
+            switch (course) {
+                case 'engineering':
+                    infoContent = `
+                        <h2  style="text-align:center">Engineering Exams</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://jeemain.nta.nic.in/" target="_blank">JEE Main</a></h3>
+                            <p>UG, Total Marks: 360</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://jeeadv.ac.in/" target="_blank">JEE Advanced</a></h3>
+                            <p>UG, Total Marks: 372</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions and Numerical</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://gate2024.iisc.ac.in/" target="_blank">GATE</a></h3>
+                            <p>PG, Total Marks: 100</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions and Numerical</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://bitsadmission.com/" target="_blank">BITSAT</a></h3>
+                            <p>UG, Total Marks: 450</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://vit.ac.in/" target="_blank">VITEEE</a></h3>
+                            <p>UG, Total Marks: 125</p>
+                            <p>Duration: 2 hours 30 minutes</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.srmist.edu.in/" target="_blank">SRMJEEE</a></h3>
+                            <p>UG, Total Marks: 315</p>
+                            <p>Duration: 2 hours 30 minutes</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        `;
+                    break;
+                case 'medical':
+                    infoContent = `
+                        <h2  style="text-align:center">Medical Exams</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://exams.nta.ac.in/NEET/" target="_blank">NEET</a></h3>
+                            <p>UG, Total Marks: 720</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Offline, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.aiimsexams.ac.in/info/Student_MBBS_Notice.html" target="_blank">AIIMS MBBS</a></h3>
+                            <p>UG, Total Marks: 200</p>
+                            <p>Duration: 3 hours 30 minutes</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://jipmer.edu.in/" target="_blank">JIPMER MBBS</a></h3>
+                            <p>UG, Total Marks: 200</p>
+                            <p>Duration: 2 hours 30 minutes</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://pgimer.edu.in/" target="_blank">PGIMER</a></h3>
+                            <p>PG, Total Marks: 250</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.aiimsexams.org/" target="_blank">AIIMS PG</a></h3>
+                            <p>PG, Total Marks: 200</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://nbe.edu.in/" target="_blank">NEET PG</a></h3>
+                            <p>PG, Total Marks: 1200</p>
+                            <p>Duration: 3 hours 30 minutes</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        `;
+                    break;
+                
+                case 'arts':
+                infoContent = `
+                <h2 style="text-align:center">Arts Exams</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://cucetexam.in/" target="_blank">CUCET</a></h3>
+                                <p>UG/PG, Total Marks: 100</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://jnuee.jnu.ac.in/" target="_blank">JNUEE</a></h3>
+                                <p>UG/PG, Total Marks: 100</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="http://www.du.ac.in/" target="_blank">DUET</a></h3>
+                                <p>UG/PG, Total Marks: 400</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://admissions.tiss.edu/" target="_blank">TISSNET</a></h3>
+                                <p>PG, Total Marks: 100</p>
+                                <p>Duration: 1 hour 40 minutes</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="http://bhuonline.in/" target="_blank">BHU UET</a></h3>
+                                <p>UG, Total Marks: 300</p>
+                                <p>Duration: 2 hours 30 minutes</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="http://bhuonline.in/" target="_blank">BHU PET</a></h3>
+                                <p>PG, Total Marks: 360</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            `;
+                    break;
+                case 'law': 
+                    infoContent =`
+            <h2 style="text-align:center">Law Exams</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://consortiumofnlus.ac.in/" target="_blank">CLAT</a></h3>
+                            <p>UG/PG, Total Marks: 150</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Offline, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.set-test.org/slat-overview.html" target="_blank">SLAT</a></h3>
+                            <p>UG, Total Marks: 150</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://nationallawuniversitydelhi.in/" target="_blank">AILET</a></h3>
+                            <p>UG/PG, Total Marks: 150</p>
+                            <p>Duration: 1 hour 30 minutes</p>
+                            <p>Offline, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.bhu.ac.in/law/" target="_blank">BHU UET Law</a></h3>
+                            <p>UG, Total Marks: 450</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://ipu.admissions.nic.in/" target="_blank">IPU CET Law</a></h3>
+                            <p>UG/PG, Total Marks: 400</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Offline, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://cetcell.mahacet.org/" target="_blank">MH CET Law</a></h3>
+                            <p>UG/PG, Total Marks: 150</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        `;
+                    break;  
+                case 'management':
+                    infoContent = `
+                        <h2 style="text-align:center">Management Exams</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://iimcat.ac.in/" target="_blank">CAT</a></h3>
+                            <p>PG, Total Marks: 300</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions and Numerical</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://xatonline.in/" target="_blank">XAT</a></h3>
+                            <p>PG, Total Marks: 100</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions and Essay Writing</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://mat.aima.in/" target="_blank">MAT</a></h3>
+                            <p>PG, Total Marks: 200</p>
+                            <p>Duration: 2 hours 30 minutes</p>
+                            <p>Online/Offline, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.snaptest.org/" target="_blank">SNAP</a></h3>
+                            <p>PG, Total Marks: 150</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://www.nmat.org/" target="_blank">NMAT</a></h3>
+                            <p>PG, Total Marks: 360</p>
+                            <p>Duration: 2 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exam-container">
+                            <h3><a href="https://cmat.nta.nic.in/" target="_blank">CMAT</a></h3>
+                            <p>PG, Total Marks: 400</p>
+                            <p>Duration: 3 hours</p>
+                            <p>Online, Application process: Online</p>
+                            <p>Exam Pattern: Multiple Choice Questions</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        `;
+        break;
+        case 'commerce':
+            infoContent = `
+                <h2 style="text-align:center">Commerce Exams</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.icai.org/" target="_blank">CA Foundation</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 4 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://icmai.in/studentswebsite/exam.php" target="_blank">CMA Foundation</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 4 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.icsi.edu/home/" target="_blank">CS Foundation</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 4 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://exam.ignou.ac.in/" target="_blank">IGNOU B.Com Entrance</a></h3>
+                                <p>UG, Total Marks: 100</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.du.ac.in/" target="_blank">DU JAT</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://nmimsnpat.in/" target="_blank">NPAT</a></h3>
+                                <p>UG, Total Marks: 120</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            `;
+            break;
+        
+            case 'education':
+            infoContent = `
+                <h2 style="text-align:center">Education Exams</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://cetcell.mahacet.org/" target="_blank">MAH B.Ed CET</a></h3>
+                                <p>UG, Total Marks: 100</p>
+                                <p>Duration: 1.5 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.bhu.ac.in/" target="_blank">BHU B.Ed Entrance Test</a></h3>
+                                <p>UG, Total Marks: 300</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.du.ac.in/" target="_blank">DU B.Ed Entrance Test</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.tnpsc.gov.in/" target="_blank">TN TRB</a></h3>
+                                <p>PG, Total Marks: 150</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://cdn3.digialm.com/per/g21/pub/1936/ASM/WebPortal/12/index.html?1936@@12@@1" target="_blank">UP B.Ed JEE</a></h3>
+                                <p>UG, Total Marks: 400</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.bhu.ac.in/" target="_blank">BHU M.Ed Entrance Test</a></h3>
+                                <p>PG, Total Marks: 300</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            `;
+            break;
+            case 'computerapplication':
+            infoContent = `
+                <h2 style="text-align:center">Computer Application Exams</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://nimcet.admissions.nic.in/" target="_blank">NIMCET</a></h3>
+                                <p>PG, Total Marks: 480</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.bitmesra.ac.in/print_Brochure_a?brid=6&nid=8" target="_blank">BIT MCA</a></h3>
+                                <p>PG, Total Marks: 150</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.jnu.ac.in/scss-mca" target="_blank">JNU MCA</a></h3>
+                                <p>PG, Total Marks: 100</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://cs.du.ac.in/admission/mca/" target="_blank">DU MCA</a></h3>
+                                <p>PG, Total Marks: 400</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://tancet.annauniv.edu/tancet/index.html" target="_blank">TANCET MCA</a></h3>
+                                <p>PG, Total Marks: 100</p>
+                                <p>Duration: 2 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://iop.ignouonline.ac.in/programme/p20" target="_blank">IGNOU MCA</a></h3>
+                                <p>PG, Total Marks: 200</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            `;
+            break;
+            case 'science':
+            infoContent = `
+                <h2 style="text-align:center">Science Exams</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://jam.iitm.ac.in/" target="_blank">IIT JAM</a></h3>
+                                <p>PG, Total Marks: 100</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions and Numerical</p>
+                            </div>
+                            <hr>
+                        </div>
+                           <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.nestexam.in/" target="_blank">NEST</a></h3>
+                                <p>UG, Total Marks: 180</p>
+                                <p>Duration: 3 hours</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://icar.nta.nic.in/" target="_blank">ICAR AIEEA</a></h3>
+                                <p>UG/PG, Total Marks: Varies</p>
+                                <p>Duration: Varies</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    
+                      
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.ets.org/gre" target="_blank">GRE</a></h3>
+                                <p>Graduate, Total Marks: Varies</p>
+                                <p>Duration: Varies</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Verbal Reasoning, Quantitative Reasoning, Analytical Writing</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://exams.nta.ac.in/CUET-UG/" target="_blank">CUET</a></h3>
+                                <p>Undergraduate, Total Marks: Varies</p>
+                                <p>Duration: Varies</p>
+                                <p>Offline, Application process: Online</p>
+                                <p>Exam Pattern: Multiple Choice Questions</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exam-container">
+                                <h3><a href="https://www.mba.com/exams/gmat" target="_blank">GMAT</a></h3>
+                                <p>Graduate, Total Marks: 200-800</p>
+                                <p>Duration: 3.5 hours</p>
+                                <p>Online, Application process: Online</p>
+                                <p>Exam Pattern: Analytical Writing, Integrated Reasoning, Quantitative, Verbal</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    
+                        
+                        
+                    
+                </div>
+            `;
+            break;
+        
+
+    
+
+        }
+
+            infoSection.innerHTML = infoContent;
+        
+            infoSection.style.display = 'block';
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
